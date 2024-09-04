@@ -5,7 +5,7 @@
     } @else {
         <p>Localisation non spécifiée</p>
     }
-    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+    <p>Mis en ligne le {{ faceSnap.createdDate | date: 'd MMMM yyyy, à HH:mm'}}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{ faceSnap.description }}</p>
     <p>
