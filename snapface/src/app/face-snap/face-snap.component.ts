@@ -1,10 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {FaceSnap} from '../models/face-snap';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-face-snap',
   standalone: true,
-  imports: [],
+  imports: [
+    NgStyle,
+    NgClass
+  ],
   templateUrl: './face-snap.component.html',
   styleUrl: './face-snap.component.scss'
 })
@@ -17,7 +21,7 @@ export class FaceSnapComponent {
     this.snapButtonText = "Oh, snap";
     this.hasUserSnapped = false
   }
-  
+
   onClickSnap(): void{
     if(this.hasUserSnapped){
       this.snapButtonText = "Oh, Snap !"
