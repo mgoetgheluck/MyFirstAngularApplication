@@ -12,4 +12,12 @@ export class FaceSnap {
         this.snaps = snaps;
         this.imageUrl = imageUrl;
     }
+
+    addSnap(): void {
+        this.snaps++;
+    }
+
+    removeSnap(): void {
+        this.snaps--;
+    }
 }
